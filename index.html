@@ -213,43 +213,12 @@
             gap: 12px;
         }
 
-        .split-presets {
-            display: flex;
-            background: var(--bg-pane);
-            border: 1px solid var(--border);
-            border-radius: 6px;
-            padding: 2px;
-            gap: 2px;
-        }
-
-        .split-btn {
-            background: transparent;
-            border: none;
-            padding: 4px 10px;
-            font-size: 0.75rem;
-            font-weight: 600;
-            color: var(--text-muted);
-            border-radius: 4px;
-            cursor: pointer;
-            transition: all 0.15s ease;
-        }
-
-        .split-btn:hover {
-            color: var(--text-main);
-        }
-
-        .split-btn.active {
-            background: var(--accent-blue);
-            color: #ffffff;
-        }
-
         .stats-strip {
             display: flex;
             align-items: center;
             gap: 14px;
             font-size: 0.82rem;
-            border-left: 1px solid var(--border);
-            padding-left: 14px;
+            padding-right: 4px;
         }
 
         .stat-item {
@@ -445,6 +414,10 @@
             scroll-behavior: smooth;
         }
 
+        #data-pane > * {
+            flex-shrink: 0 !important;
+        }
+
         #data-pane > *:not(.mobile-day-jumper) {
             margin-left: 16px !important;
             margin-right: 16px !important;
@@ -459,41 +432,52 @@
             background: var(--jumper-bg) !important;
             border-bottom: 1px solid var(--jumper-border) !important;
             box-shadow: var(--jumper-shadow) !important;
-            padding: 10px 14px !important;
+            padding: 8px 14px !important;
             margin: 0 0 12px 0 !important;
             width: 100% !important;
             box-sizing: border-box !important;
             display: flex !important;
+            flex-shrink: 0 !important;
+            align-items: center !important;
             gap: 6px !important;
             overflow-x: auto !important;
             -webkit-overflow-scrolling: touch !important;
             scrollbar-width: none !important;
             touch-action: pan-x !important;
+            min-height: 48px !important;
         }
 
         .mobile-day-jumper::-webkit-scrollbar {
-            display: none;
+            display: none !important;
+            width: 0 !important;
+            height: 0 !important;
         }
 
         .day-jump-btn {
-            flex-shrink: 0;
+            flex-shrink: 0 !important;
+            display: inline-flex !important;
+            align-items: center !important;
+            justify-content: center !important;
             background: var(--jumper-btn-bg);
             border: 1px solid var(--jumper-btn-border);
             color: var(--jumper-btn-color);
-            padding: 4px 10px;
-            border-radius: 14px;
-            font-size: 0.72rem;
+            padding: 0 12px !important;
+            height: 30px !important;
+            line-height: 30px !important;
+            border-radius: 15px !important;
+            font-size: 0.75rem !important;
             font-weight: 700;
             cursor: pointer;
             transition: all 0.15s ease;
             white-space: nowrap;
+            box-sizing: border-box !important;
         }
 
         .day-jump-btn:hover,
         .day-jump-btn.active {
-            background: var(--accent-blue);
-            border-color: var(--accent-blue);
-            color: #fff;
+            background: var(--accent-blue) !important;
+            border-color: var(--accent-blue) !important;
+            color: #ffffff !important;
         }
 
         .day-card {
@@ -646,6 +630,10 @@
                 gap: 0 !important;
             }
 
+            body.tab-feed #data-pane > * {
+                flex-shrink: 0 !important;
+            }
+
             body.tab-feed #data-pane > *:not(.mobile-day-jumper) {
                 margin-left: 12px !important;
                 margin-right: 12px !important;
@@ -726,11 +714,6 @@
         </div>
         <div class="header-controls">
             <!-- Split View Presets -->
-            <div class="split-presets">
-                <button type="button" class="split-btn" id="btn-preset-map-wide" onclick="setSplitRatio('map-wide')" title="65% Map / 35% Feed">🗺️ 65% Map</button>
-                <button type="button" class="split-btn active" id="btn-preset-balanced" onclick="setSplitRatio('balanced')" title="50/50 Balanced Split">⚖️ 50/50</button>
-                <button type="button" class="split-btn" id="btn-preset-feed-wide" onclick="setSplitRatio('feed-wide')" title="35% Map / 65% Feed">📋 65% Feed</button>
-            </div>
             <div class="stats-strip">
                 <div class="stat-item">
                     <span class="stat-val">18 Days</span>
@@ -779,7 +762,7 @@
         <div id="data-pane">
             <!-- Sticky Quick-Day Jumper -->
             <div class="mobile-day-jumper">
-                <span style="font-size: 10px; font-weight: 800; color: #64748b; display: flex; align-items: center; padding-right: 4px;">JUMP:</span>
+                <span style="font-size: 11px; font-weight: 800; color: #64748b; display: flex; align-items: center; padding-right: 4px; flex-shrink: 0;">JUMP:</span>
                 <button class="day-jump-btn" onclick="const el = document.getElementById('day-card-1'); if (el) el.scrollIntoView({behavior: 'smooth', block: 'start'});">Day 1</button> <button class="day-jump-btn" onclick="const el = document.getElementById('day-card-2'); if (el) el.scrollIntoView({behavior: 'smooth', block: 'start'});">Day 2</button> <button class="day-jump-btn" onclick="const el = document.getElementById('day-card-3'); if (el) el.scrollIntoView({behavior: 'smooth', block: 'start'});">Day 3</button> <button class="day-jump-btn" onclick="const el = document.getElementById('day-card-4'); if (el) el.scrollIntoView({behavior: 'smooth', block: 'start'});">Day 4</button> <button class="day-jump-btn" onclick="const el = document.getElementById('day-card-5'); if (el) el.scrollIntoView({behavior: 'smooth', block: 'start'});">Day 5</button> <button class="day-jump-btn" onclick="const el = document.getElementById('day-card-6'); if (el) el.scrollIntoView({behavior: 'smooth', block: 'start'});">Day 6</button> <button class="day-jump-btn" onclick="const el = document.getElementById('day-card-7'); if (el) el.scrollIntoView({behavior: 'smooth', block: 'start'});">Day 7</button> <button class="day-jump-btn" onclick="const el = document.getElementById('day-card-8'); if (el) el.scrollIntoView({behavior: 'smooth', block: 'start'});">Day 8</button> <button class="day-jump-btn" onclick="const el = document.getElementById('day-card-9'); if (el) el.scrollIntoView({behavior: 'smooth', block: 'start'});">Day 9</button> <button class="day-jump-btn" onclick="const el = document.getElementById('day-card-10'); if (el) el.scrollIntoView({behavior: 'smooth', block: 'start'});">Day 10</button> <button class="day-jump-btn" onclick="const el = document.getElementById('day-card-11'); if (el) el.scrollIntoView({behavior: 'smooth', block: 'start'});">Day 11</button> <button class="day-jump-btn" onclick="const el = document.getElementById('day-card-12'); if (el) el.scrollIntoView({behavior: 'smooth', block: 'start'});">Day 12</button> <button class="day-jump-btn" onclick="const el = document.getElementById('day-card-13'); if (el) el.scrollIntoView({behavior: 'smooth', block: 'start'});">Day 13</button> <button class="day-jump-btn" onclick="const el = document.getElementById('day-card-14'); if (el) el.scrollIntoView({behavior: 'smooth', block: 'start'});">Day 14</button> <button class="day-jump-btn" onclick="const el = document.getElementById('day-card-15'); if (el) el.scrollIntoView({behavior: 'smooth', block: 'start'});">Day 15</button> <button class="day-jump-btn" onclick="const el = document.getElementById('day-card-16'); if (el) el.scrollIntoView({behavior: 'smooth', block: 'start'});">Day 16</button> <button class="day-jump-btn" onclick="const el = document.getElementById('day-card-17'); if (el) el.scrollIntoView({behavior: 'smooth', block: 'start'});">Day 17</button> <button class="day-jump-btn" onclick="const el = document.getElementById('day-card-18'); if (el) el.scrollIntoView({behavior: 'smooth', block: 'start'});">Day 18</button>
             </div>
 
@@ -5001,21 +4984,7 @@
         }
 
         function updateActivePresetButton() {
-            const containerWidth = mainContainer.clientWidth;
-            const currentWidth = dataPane.offsetWidth;
-            const feedRatio = currentWidth / containerWidth;
-
-            document.querySelectorAll('.split-btn').forEach(b => b.classList.remove('active'));
-            if (feedRatio <= 0.40) {
-                const btn = document.getElementById('btn-preset-map-wide');
-                if (btn) btn.classList.add('active');
-            } else if (feedRatio >= 0.60) {
-                const btn = document.getElementById('btn-preset-feed-wide');
-                if (btn) btn.classList.add('active');
-            } else {
-                const btn = document.getElementById('btn-preset-balanced');
-                if (btn) btn.classList.add('active');
-            }
+            // Preset division buttons removed per user preference
         }
 
         function setSplitRatio(preset) {
@@ -5538,11 +5507,9 @@
             selectGanttDay(1);
             fetchLiveWeather();
 
-            // Set initial mobile tab or desktop view
+            // Set initial mobile tab
             if (window.innerWidth <= 850) {
                 switchMobileTab('feed');
-            } else {
-                updateActivePresetButton();
             }
 
             setTimeout(() => {
