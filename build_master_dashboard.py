@@ -83,6 +83,8 @@ with open(pois_path, "r", encoding="utf-8") as f:
             poi_type = "sight"
             color = "#F97316"
 
+        photo = r.get("Photo_URL", "").strip()
+
         pois_data.append({
             "name": name,
             "lat": lat,
@@ -95,7 +97,8 @@ with open(pois_path, "r", encoding="utf-8") as f:
             "url": url,
             "cost": cost,
             "phone": phone,
-            "day": day_str
+            "day": day_str,
+            "photo": photo
         })
 
 print(f"Loaded {len(tracks_data)} stages and {len(pois_data)} POIs.")
@@ -999,17 +1002,201 @@ full_html = f"""<!DOCTYPE html>
             border: none !important;
         }}
 
-        /* Leaflet Popups Theming */
+        /* Leaflet Popups Theming & Photo Cards */
         .leaflet-popup-content-wrapper {{
             background: var(--bg-surface) !important;
             color: var(--text-main) !important;
             border: 1px solid var(--border) !important;
-            border-radius: 8px !important;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25) !important;
+            border-radius: 12px !important;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3) !important;
+            padding: 0 !important;
+            overflow: hidden !important;
+        }}
+
+        .leaflet-popup-content {{
+            margin: 0 !important;
+            line-height: 1.4 !important;
         }}
 
         .leaflet-popup-tip {{
             background: var(--bg-surface) !important;
+        }}
+
+        .leaflet-popup-close-button {{
+            color: #ffffff !important;
+            background: rgba(15, 23, 42, 0.65) !important;
+            backdrop-filter: blur(4px) !important;
+            border-radius: 50% !important;
+            width: 24px !important;
+            height: 24px !important;
+            display: flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+            padding: 0 !important;
+            top: 8px !important;
+            right: 8px !important;
+            font-size: 15px !important;
+            z-index: 10 !important;
+            transition: background 0.15s ease !important;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.3) !important;
+        }}
+
+        .leaflet-popup-close-button:hover {{
+            background: rgba(15, 23, 42, 0.95) !important;
+        }}
+
+        .poi-popup-card {{
+            font-family: 'Plus Jakarta Sans', -apple-system, sans-serif;
+            display: flex;
+            flex-direction: column;
+            width: 270px;
+            overflow: hidden;
+            border-radius: 12px;
+        }}
+
+        .poi-popup-img-wrap {{
+            position: relative;
+            width: 100%;
+            height: 135px;
+            background: #0f172a;
+            overflow: hidden;
+        }}
+
+        .poi-popup-img {{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.25s ease;
+        }}
+
+        .poi-popup-card:hover .poi-popup-img {{
+            transform: scale(1.03);
+        }}
+
+        .poi-popup-cat-badge {{
+            position: absolute;
+            bottom: 8px;
+            left: 8px;
+            color: #ffffff;
+            font-size: 0.65rem;
+            font-weight: 800;
+            padding: 3px 8px;
+            border-radius: 4px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+            z-index: 2;
+        }}
+
+        .poi-popup-day-badge {{
+            position: absolute;
+            top: 8px;
+            left: 8px;
+            background: rgba(15, 23, 42, 0.75);
+            backdrop-filter: blur(4px);
+            color: #38bdf8;
+            font-size: 0.68rem;
+            font-weight: 800;
+            padding: 3px 8px;
+            border-radius: 4px;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            z-index: 2;
+        }}
+
+        .poi-popup-body {{
+            padding: 12px 14px 14px 14px;
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }}
+
+        .poi-popup-title {{
+            font-weight: 800;
+            font-size: 0.95rem;
+            color: var(--text-main);
+            line-height: 1.25;
+            margin-top: 2px;
+        }}
+
+        .poi-popup-desc {{
+            font-size: 0.78rem;
+            color: var(--text-card);
+            line-height: 1.4;
+            margin-top: 3px;
+        }}
+
+        .poi-popup-cost {{
+            font-size: 0.78rem;
+            font-weight: 800;
+            color: var(--accent-green);
+            font-family: monospace;
+            margin-top: 3px;
+        }}
+
+        .poi-popup-actions {{
+            display: flex;
+            gap: 6px;
+            margin-top: 10px;
+            flex-wrap: wrap;
+        }}
+
+        .poi-popup-btn {{
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 6px 10px;
+            border-radius: 6px;
+            font-size: 0.72rem;
+            font-weight: 700;
+            text-decoration: none;
+            transition: all 0.15s ease;
+        }}
+
+        .poi-popup-btn-nav {{
+            flex: 1;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            color: var(--accent-blue);
+        }}
+
+        .poi-popup-btn-nav:hover {{
+            background: var(--accent-blue);
+            color: #ffffff;
+            border-color: var(--accent-blue);
+        }}
+
+        .poi-popup-btn-book {{
+            flex: 1;
+            background: var(--accent-blue);
+            color: #ffffff;
+            border: 1px solid var(--accent-blue);
+        }}
+
+        .poi-popup-btn-book:hover {{
+            opacity: 0.9;
+        }}
+
+        .poi-popup-btn-site {{
+            flex: 1;
+            background: var(--bg-card);
+            color: var(--accent-green);
+            border: 1px solid var(--accent-green);
+        }}
+
+        .poi-popup-btn-site:hover {{
+            background: var(--accent-green);
+            color: #ffffff;
+        }}
+
+        .poi-popup-btn-call {{
+            background: var(--btn-call-bg, #e2e8f0);
+            color: var(--btn-call-text, #1e293b);
+            border: 1px solid var(--border);
+        }}
+
+        .poi-popup-btn-call:hover {{
+            opacity: 0.85;
         }}
 
         /* Drag-to-Resize Divider */
@@ -1721,23 +1908,38 @@ full_html = f"""<!DOCTYPE html>
                 icon: createCustomIcon(poi)
             }});
 
-            let hotelLinks = '';
-            if (poi.url && poi.url !== '#') {{
-                hotelLinks += `<a href="${{poi.url}}" target="_blank" rel="noopener noreferrer" style="display: inline-block; background: var(--accent-blue); color: #fff; padding: 4px 8px; border-radius: 4px; text-decoration: none; font-size: 0.72rem; font-weight: 700; margin-top: 6px;">Direct Booking ↗</a> `;
+            let actionLinks = '';
+            if (poi.url && poi.url !== '#' && poi.url.startsWith('http')) {{
+                const isHotel = poi.type === 'hotel-primary' || poi.type === 'hotel-secondary';
+                const label = isHotel ? 'Direct Booking ↗' : 'Official Site ↗';
+                const cls = isHotel ? 'poi-popup-btn-book' : 'poi-popup-btn-site';
+                actionLinks += `<a href="${{poi.url}}" target="_blank" rel="noopener noreferrer" class="poi-popup-btn ${{cls}}">${{label}}</a>`;
             }}
             if (poi.phone) {{
-                hotelLinks += `<a href="tel:${{poi.phone.replace(/\\s+/g, '')}}" style="display: inline-block; background: var(--btn-call-bg, #e2e8f0); color: var(--btn-call-text, #1e293b); padding: 4px 8px; border-radius: 4px; text-decoration: none; font-size: 0.72rem; font-weight: 600; margin-top: 6px;">📞 ${{poi.phone}}</a>`;
+                actionLinks += `<a href="tel:${{poi.phone.replace(/\\s+/g, '')}}" class="poi-popup-btn poi-popup-btn-call">📞 Call</a>`;
             }}
 
+            const fallbackPhoto = 'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=600&q=80';
+            const photoSrc = poi.photo || fallbackPhoto;
+
             marker.bindPopup(`
-                <div style="font-family: 'Plus Jakarta Sans', sans-serif; max-width: 250px;">
-                    <div style="font-size: 0.70rem; font-weight: 800; color: ${{poi.color}}; text-transform: uppercase;">${{poi.category}} • ${{poi.day}}</div>
-                    <div style="font-weight: 800; font-size: 0.92rem; color: var(--text-main, #0f172a); margin-top: 2px;">${{poi.name}}</div>
-                    <div style="font-size: 0.78rem; color: var(--text-card, #475569); margin-top: 4px; line-height: 1.35;">${{poi.desc}}</div>
-                    ${{poi.cost ? `<div style="font-size: 0.75rem; font-weight: 700; color: var(--accent-green, #059669); margin-top: 4px;">Rate: ${{poi.cost}}</div>` : ''}}
-                    ${{hotelLinks ? `<div style="margin-top: 6px;">${{hotelLinks}}</div>` : ''}}
+                <div class="poi-popup-card">
+                    <div class="poi-popup-img-wrap">
+                        <img src="${{photoSrc}}" alt="${{poi.name}}" class="poi-popup-img" loading="lazy" onerror="this.onerror=null; this.src='${{fallbackPhoto}}';">
+                        <span class="poi-popup-day-badge">${{poi.day}}</span>
+                        <span class="poi-popup-cat-badge" style="background: ${{poi.color}};">${{poi.category}}</span>
+                    </div>
+                    <div class="poi-popup-body">
+                        <div class="poi-popup-title">${{poi.name}}</div>
+                        <div class="poi-popup-desc">${{poi.desc}}</div>
+                        ${{poi.cost ? `<div class="poi-popup-cost"><span style="color: var(--text-muted); font-size: 0.70rem; font-weight: 600;">Rate:</span> ${{poi.cost}}</div>` : ''}}
+                        <div class="poi-popup-actions">
+                            <a href="https://www.google.com/maps/search/?api=1&query=${{poi.lat}},${{poi.lon}}" target="_blank" rel="noopener noreferrer" class="poi-popup-btn poi-popup-btn-nav">🗺️ Directions ↗</a>
+                            ${{actionLinks}}
+                        </div>
+                    </div>
                 </div>
-            `);
+            `, {{ maxWidth: 300, minWidth: 260 }});
 
             marker.poiType = poi.type;
             marker.addTo(map);
