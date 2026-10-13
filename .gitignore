@@ -1,0 +1,19 @@
+# Temporary / Editor files
+*.tmp
+*.bak
+*~
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Python cache & environments
+__pycache__/
+*.pyc
+*.pyo
+venv/
+.env
+
+# Antigravity CLI / AI scratch artifacts
+.gemini/
+scratch/
+*.log

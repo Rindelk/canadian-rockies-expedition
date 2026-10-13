@@ -1,0 +1,660 @@
+{
+  "title": "Heart of the Rockies & Mount Robson 18-Day Master Loop",
+  "version": "1.0",
+  "season": "July/August Summer Peak",
+  "total_distance_km": 7430,
+  "total_distance_mi": 4617,
+  "origin_basecamp": {
+    "name": "Hanmer Home Base",
+    "location": "Hanmer, Greater Sudbury, ON",
+    "coordinates": [46.6473, -80.9754]
+  },
+  "fleet": [
+    {
+      "model": "Honda Africa Twin Adventure Sports ES DCT",
+      "year": 2025,
+      "engine": "1084cc Unicam Parallel-Twin",
+      "compression": "10.5:1",
+      "fuel_capacity_liters": 24.8,
+      "fuel_capacity_gallons": 6.55,
+      "aux_bladder_liters": 11.4,
+      "min_octane_aki": 87,
+      "safe_range_miles": 275,
+      "safe_range_km": 443,
+      "role": "Expedition Flagship / Lead Tanker (Carries 91 Premium Bladder)"
+    },
+    {
+      "model": "Ducati Multistrada V2S",
+      "year": 2026,
+      "engine": "937cc Testastretta 11° Twin",
+      "compression": "12.6:1",
+      "fuel_capacity_liters": 20.0,
+      "fuel_capacity_gallons": 5.28,
+      "aux_bladder_liters": 0.0,
+      "min_octane_aki": 91,
+      "safe_range_miles": 165,
+      "safe_range_km": 265,
+      "role": "Sport ADV / Range Governor (Requires 91 AKI / Fuel Stops ≤130 mi)"
+    }
+  ],
+  "stages": [
+    {
+      "day": 1,
+      "date": "Day 1 (Saturday, July 10)",
+      "name": "Hanmer, ON to Wawa, ON",
+      "corridor": "Trans-Canada Hwy 17 West",
+      "distance_km": 530.0,
+      "distance_mi": 329.3,
+      "riding_time": "5h 45m",
+      "weather": "Sunny, 22°C (72°F) - Lake Superior breezes",
+      "description": "Roll out from Hanmer along Hwy 17 through the North Channel shield. Pass Espanola, Blind River, and Sault Ste. Marie, then hug Lake Superior's wilderness coast past Pancake Bay and Old Woman Bay to the giant Wawa Goose.",
+      "waypoints": [
+        [46.6473, -80.9754],
+        [46.2625, -81.7656],
+        [46.1856, -82.9575],
+        [46.5219, -84.3461],
+        [46.9631, -84.7125],
+        [47.7889, -84.9083],
+        [47.9931, -84.7741]
+      ],
+      "primary_hotel": {
+        "name": "Wawa Motor Inn / Log Chalets",
+        "location": "Wawa, ON",
+        "cost": "$165 CAD/night",
+        "phone": "+1 705-856-2278",
+        "url": "https://wawamotorinn.ca/"
+      },
+      "secondary_hotel": {
+        "name": "Best Western Pioneer Inn",
+        "location": "Wawa, ON",
+        "cost": "$189 CAD/night",
+        "phone": "+1 705-856-7262",
+        "url": "https://www.bestwestern.com/"
+      }
+    },
+    {
+      "day": 2,
+      "date": "Day 2 (Sunday, July 11)",
+      "name": "Wawa, ON to Thunder Bay, ON",
+      "corridor": "Trans-Canada Hwy 17 North Shore",
+      "distance_km": 480.0,
+      "distance_mi": 298.3,
+      "riding_time": "5h 30m",
+      "weather": "Partly Cloudy, 20°C (68°F)",
+      "description": "Breathtaking cliffside riding hugging Lake Superior. Sweep past White River (Winnie the Pooh birthplace), Marathon, Terrace Bay lighthouse, and the massive Nipigon River bridge to the iconic Terry Fox Monument overlooking the Sleeping Giant.",
+      "waypoints": [
+        [47.9931, -84.7741],
+        [48.5917, -85.2817],
+        [48.7236, -86.3764],
+        [48.7833, -87.1000],
+        [49.0131, -88.2611],
+        [48.4556, -89.1556],
+        [48.3809, -89.2477]
+      ],
+      "primary_hotel": {
+        "name": "Best Western Plus Nor'Wester Hotel & Conference Centre",
+        "location": "Thunder Bay, ON",
+        "cost": "$195 CAD/night",
+        "phone": "+1 807-473-9123",
+        "url": "https://www.bestwestern.com/"
+      },
+      "secondary_hotel": {
+        "name": "Delta Hotels by Marriott Thunder Bay Waterfront",
+        "location": "Thunder Bay, ON",
+        "cost": "$240 CAD/night",
+        "phone": "+1 807-346-5665",
+        "url": "https://www.marriott.com/"
+      }
+    },
+    {
+      "day": 3,
+      "date": "Day 3 (Monday, July 12)",
+      "name": "Thunder Bay, ON to Kenora, ON",
+      "corridor": "Trans-Canada Hwy 17 Boreal Shield",
+      "distance_km": 490.0,
+      "distance_mi": 304.5,
+      "riding_time": "5h 25m",
+      "weather": "Sunny, 23°C (73°F)",
+      "description": "Stop at majestic Kakabeka Falls (the 'Niagara of the North') before carving through deep Canadian Shield pine forests and granite cuts through Upsala, Ignace, Dryden, and Vermilion Bay to the vibrant shores of Lake of the Woods.",
+      "waypoints": [
+        [48.3809, -89.2477],
+        [48.4031, -89.6247],
+        [49.0500, -90.4667],
+        [49.4167, -91.6667],
+        [49.7800, -92.8367],
+        [49.8500, -93.3833],
+        [49.7670, -94.4894]
+      ],
+      "primary_hotel": {
+        "name": "Clarion Lakeside Inn & Conference Centre",
+        "location": "Kenora, ON",
+        "cost": "$185 CAD/night",
+        "phone": "+1 807-468-5521",
+        "url": "https://www.choicehotels.com/"
+      },
+      "secondary_hotel": {
+        "name": "Super 8 by Wyndham Kenora",
+        "location": "Kenora, ON",
+        "cost": "$150 CAD/night",
+        "phone": "+1 807-468-8016",
+        "url": "https://www.wyndhamhotels.com/"
+      }
+    },
+    {
+      "day": 4,
+      "date": "Day 4 (Tuesday, July 13)",
+      "name": "Kenora, ON to Regina, SK",
+      "corridor": "Trans-Canada Hwy 1 Prairie Express",
+      "distance_km": 675.0,
+      "distance_mi": 419.4,
+      "riding_time": "6h 50m",
+      "weather": "Warm & Sunny, 27°C (81°F)",
+      "description": "Cross the Manitoba boundary into prairie farmland. Bypass Winnipeg on the Trans-Canada perimeter, riding open multi-lane highway past Portage la Prairie, Brandon, Moosomin, and Indian Head into Saskatchewan's capital city, Regina.",
+      "waypoints": [
+        [49.7670, -94.4894],
+        [49.6833, -95.3167],
+        [49.8300, -97.2800],
+        [49.9728, -98.2919],
+        [49.8485, -99.9501],
+        [50.1436, -101.6644],
+        [50.5333, -103.6667],
+        [50.4452, -104.6189]
+      ],
+      "primary_hotel": {
+        "name": "Delta Hotels by Marriott Regina",
+        "location": "Regina, SK",
+        "cost": "$175 CAD/night",
+        "phone": "+1 306-525-5255",
+        "url": "https://www.marriott.com/"
+      },
+      "secondary_hotel": {
+        "name": "The Atlas Hotel",
+        "location": "Regina, SK",
+        "cost": "$160 CAD/night",
+        "phone": "+1 306-586-3443",
+        "url": "https://atlashotel.com/"
+      }
+    },
+    {
+      "day": 5,
+      "date": "Day 5 (Wednesday, July 14)",
+      "name": "Regina, SK to Medicine Hat, AB",
+      "corridor": "Trans-Canada Hwy 1 Big Sky Country",
+      "distance_km": 465.0,
+      "distance_mi": 288.9,
+      "riding_time": "4h 45m",
+      "weather": "Sunny, 28°C (82°F) - Big Sky sun",
+      "description": "Cruising the heart of Big Sky Country. Pause for a photo with Mac the Moose in Moose Jaw, pass the white shores of Chaplin Lake, refuel at Swift Current, and cross into Alberta's badland coulees at the historic gas city of Medicine Hat.",
+      "waypoints": [
+        [50.4452, -104.6189],
+        [50.3934, -105.5387],
+        [50.4500, -106.6667],
+        [50.2858, -107.7972],
+        [50.0989, -108.4839],
+        [49.9142, -109.4794],
+        [50.0417, -110.6775]
+      ],
+      "primary_hotel": {
+        "name": "Medicine Hat Lodge, Trademark Collection by Wyndham",
+        "location": "Medicine Hat, AB",
+        "cost": "$160 CAD/night",
+        "phone": "+1 403-529-2222",
+        "url": "https://medhatlodge.com/"
+      },
+      "secondary_hotel": {
+        "name": "Hampton Inn by Hilton Medicine Hat",
+        "location": "Medicine Hat, AB",
+        "cost": "$155 CAD/night",
+        "phone": "+1 403-548-7818",
+        "url": "https://www.hilton.com/"
+      }
+    },
+    {
+      "day": 6,
+      "date": "Day 6 (Thursday, July 15)",
+      "name": "Medicine Hat, AB to Canmore / Banff, AB",
+      "corridor": "Trans-Canada Hwy 1 Mountain Wall Approach",
+      "distance_km": 390.0,
+      "distance_mi": 242.3,
+      "riding_time": "4h 15m",
+      "weather": "Sunny, 24°C (75°F) Valley to 19°C (66°F) Mountains",
+      "description": "Ride past Brooks and Bassano into the rolling foothills west of Calgary. Watch the jagged wall of the Canadian Rockies erupt on the western horizon. Enter the Bow Valley gateway beneath the Three Sisters and Mount Rundle to Canmore/Banff!",
+      "waypoints": [
+        [50.0417, -110.6775],
+        [50.5642, -111.8980],
+        [50.7833, -112.4667],
+        [51.0850, -114.2400],
+        [51.1700, -114.8800],
+        [51.0899, -115.3597]
+      ],
+      "primary_hotel": {
+        "name": "Coast Canmore Hotel & Conference Centre",
+        "location": "Canmore, AB",
+        "cost": "$275 CAD/night",
+        "phone": "+1 403-678-3625",
+        "url": "https://www.coasthotels.com/"
+      },
+      "secondary_hotel": {
+        "name": "Banff KOA Holiday / Camping Cabins",
+        "location": "Banff/Canmore, AB",
+        "cost": "$170 CAD/night",
+        "phone": "+1 403-678-5562",
+        "url": "https://koa.com/"
+      }
+    },
+    {
+      "day": 7,
+      "date": "Day 7 (Friday, July 16)",
+      "name": "Banff, Lake Louise & Yoho NP Loop",
+      "corridor": "Bow Valley Parkway 1A & Kicking Horse Canyon",
+      "distance_km": 160.0,
+      "distance_mi": 99.4,
+      "riding_time": "2h 45m",
+      "weather": "Crisp Alpine Sunny, 21°C (70°F)",
+      "description": "Luggage-free alpine day trip! Ride the scenic Bow Valley Parkway (1A) beneath Castle Mountain, view turquoise Lake Louise and the Victoria Glacier, cross the Continental Divide into Yoho National Park to witness the Spiral Tunnels and Emerald Lake.",
+      "waypoints": [
+        [51.0899, -115.3597],
+        [51.1784, -115.5708],
+        [51.2650, -115.8200],
+        [51.2986, -115.9239],
+        [51.4254, -116.1773],
+        [51.4500, -116.2800],
+        [51.4390, -116.4150],
+        [51.4420, -116.5400],
+        [51.0899, -115.3597]
+      ],
+      "primary_hotel": {
+        "name": "Coast Canmore Hotel & Conference Centre (Night 2)",
+        "location": "Canmore, AB",
+        "cost": "$275 CAD/night",
+        "phone": "+1 403-678-3625",
+        "url": "https://www.coasthotels.com/"
+      },
+      "secondary_hotel": {
+        "name": "Banff KOA Holiday / Camping Cabins (Night 2)",
+        "location": "Banff/Canmore, AB",
+        "cost": "$170 CAD/night",
+        "phone": "+1 403-678-5562",
+        "url": "https://koa.com/"
+      }
+    },
+    {
+      "day": 8,
+      "date": "Day 8 (Saturday, July 17)",
+      "name": "Canmore to Jasper via ICEFIELDS PARKWAY",
+      "corridor": "Alberta Hwy 93 North - The World's #1 Scenic Highway",
+      "distance_km": 290.0,
+      "distance_mi": 180.2,
+      "riding_time": "4h 15m",
+      "weather": "Alpine Crisp, 17°C (63°F) - Glacial winds",
+      "description": "The crown jewel of motorcycle alpine touring! Carve north on Hwy 93 past Crowfoot Glacier, Bow Lake, Peyto Lake from Bow Summit (2,088 m / 6,850 ft), the towering Weeping Wall, the Columbia Icefield / Athabasca Glacier, Sunwapta Falls, and Athabasca Falls into Jasper.",
+      "waypoints": [
+        [51.0899, -115.3597],
+        [51.4254, -116.1773],
+        [51.4589, -116.2239],
+        [51.6667, -116.4500],
+        [51.7167, -116.4989],
+        [51.9728, -116.7450],
+        [52.2203, -117.2244],
+        [52.5328, -117.6439],
+        [52.6653, -117.8836],
+        [52.8737, -118.0814]
+      ],
+      "primary_hotel": {
+        "name": "Forest Park Hotel / Jasper Inn & Suites",
+        "location": "Jasper, AB",
+        "cost": "$280 CAD/night",
+        "phone": "+1 780-852-6090",
+        "url": "https://forestparkhotel.ca/"
+      },
+      "secondary_hotel": {
+        "name": "Whistlers Inn Jasper",
+        "location": "Jasper, AB",
+        "cost": "$235 CAD/night",
+        "phone": "+1 780-852-3361",
+        "url": "https://www.whistlersinn.com/"
+      }
+    },
+    {
+      "day": 9,
+      "date": "Day 9 (Sunday, July 18)",
+      "name": "Jasper to MOUNT ROBSON (BC) Excursion & Back",
+      "corridor": "Yellowhead Hwy 16 West into British Columbia",
+      "distance_km": 210.0,
+      "distance_mi": 130.5,
+      "riding_time": "2h 50m",
+      "weather": "Sunny, 22°C (72°F) - Mountain vistas",
+      "description": "Ride west along Yellowhead Hwy 16 across the Continental Divide at Yellowhead Pass into BC to stand directly beneath the staggering 3,954 m (12,972 ft) Emperor Face of Mount Robson, highest peak in the Canadian Rockies! Visit Overlander Falls and return to Jasper for an unhurried couples evening.",
+      "waypoints": [
+        [52.8737, -118.0814],
+        [52.8900, -118.4650],
+        [53.0333, -119.2333],
+        [53.0300, -119.2000],
+        [52.8600, -118.5700],
+        [52.8737, -118.0814]
+      ],
+      "primary_hotel": {
+        "name": "Forest Park Hotel / Jasper Inn & Suites (Night 2)",
+        "location": "Jasper, AB",
+        "cost": "$280 CAD/night",
+        "phone": "+1 780-852-6090",
+        "url": "https://forestparkhotel.ca/"
+      },
+      "secondary_hotel": {
+        "name": "Whistlers Inn Jasper (Night 2)",
+        "location": "Jasper, AB",
+        "cost": "$235 CAD/night",
+        "phone": "+1 780-852-3361",
+        "url": "https://www.whistlersinn.com/"
+      }
+    },
+    {
+      "day": 10,
+      "date": "Day 10 (Monday, July 19)",
+      "name": "Jasper, AB to Edmonton, AB",
+      "corridor": "Yellowhead Hwy 16 East Prairie Descent",
+      "distance_km": 365.0,
+      "distance_mi": 226.8,
+      "riding_time": "3h 45m",
+      "weather": "Warm & Sunny, 25°C (77°F)",
+      "description": "Follow the wide braided Athabasca River out of Jasper National Park past Talbot Lake sand dunes into Hinton and Edson foothills. Glide on smooth divided four-lane highway into Alberta's capital city, Edmonton.",
+      "waypoints": [
+        [52.8737, -118.0814],
+        [53.1800, -117.9500],
+        [53.4000, -117.5800],
+        [53.5833, -116.4333],
+        [53.5600, -115.0000],
+        [53.5450, -113.9000],
+        [53.5461, -113.4938]
+      ],
+      "primary_hotel": {
+        "name": "Matrix Hotel Edmonton Downtown",
+        "location": "Edmonton, AB",
+        "cost": "$165 CAD/night",
+        "phone": "+1 780-429-2861",
+        "url": "https://www.matrixedmonton.com/"
+      },
+      "secondary_hotel": {
+        "name": "Fantasyland Hotel West Edmonton Mall",
+        "location": "Edmonton, AB",
+        "cost": "$210 CAD/night",
+        "phone": "+1 780-444-3000",
+        "url": "https://fantasylandhotel.com/"
+      }
+    },
+    {
+      "day": 11,
+      "date": "Day 11 (Tuesday, July 20)",
+      "name": "Edmonton, AB to Saskatoon, SK",
+      "corridor": "Yellowhead Hwy 16 Parkland Route",
+      "distance_km": 525.0,
+      "distance_mi": 326.2,
+      "riding_time": "5h 15m",
+      "weather": "Sunny, 26°C (79°F)",
+      "description": "Yellowhead Highway 16 East through Alberta's agricultural parkland. Stop at Vegreville's world-famous giant Ukrainian Pysanka (Easter Egg), cross the Alberta/Saskatchewan border in Lloydminster, pass North Battleford, and arrive in Saskatoon, the 'City of Bridges'.",
+      "waypoints": [
+        [53.5461, -113.4938],
+        [53.4936, -112.0531],
+        [53.3550, -110.8550],
+        [53.2783, -110.0050],
+        [52.7769, -108.2978],
+        [52.4600, -107.4000],
+        [52.1332, -106.6700]
+      ],
+      "primary_hotel": {
+        "name": "Delta Hotels by Marriott Bessborough (Historic Castle)",
+        "location": "Saskatoon, SK",
+        "cost": "$195 CAD/night",
+        "phone": "+1 306-244-5521",
+        "url": "https://www.marriott.com/"
+      },
+      "secondary_hotel": {
+        "name": "The James Hotel Saskatoon",
+        "location": "Saskatoon, SK",
+        "cost": "$220 CAD/night",
+        "phone": "+1 306-244-6444",
+        "url": "https://thejameshotel.ca/"
+      }
+    },
+    {
+      "day": 12,
+      "date": "Day 12 (Wednesday, July 21)",
+      "name": "Saskatoon, SK to Dauphin, MB",
+      "corridor": "Yellowhead Hwy 16 & Riding Mountain Escarpment",
+      "distance_km": 540.0,
+      "distance_mi": 335.5,
+      "riding_time": "5h 30m",
+      "weather": "Partly Cloudy, 24°C (75°F)",
+      "description": "Scenic ride across eastern Saskatchewan through Wynyard and Yorkton. Cross into Manitoba near Russell and follow the dramatic forested escarpment of Riding Mountain National Park into the parkland hub of Dauphin.",
+      "waypoints": [
+        [52.1332, -106.6700],
+        [51.8500, -105.0333],
+        [51.7667, -104.1833],
+        [51.2139, -102.4628],
+        [50.7783, -101.2828],
+        [51.1700, -100.6000],
+        [51.1494, -100.0494]
+      ],
+      "primary_hotel": {
+        "name": "Super 8 by Wyndham Dauphin",
+        "location": "Dauphin, MB",
+        "cost": "$145 CAD/night",
+        "phone": "+1 204-638-0800",
+        "url": "https://www.wyndhamhotels.com/"
+      },
+      "secondary_hotel": {
+        "name": "Dauphin Inn Motel",
+        "location": "Dauphin, MB",
+        "cost": "$125 CAD/night",
+        "phone": "+1 204-638-4430",
+        "url": "https://dauphininn.ca/"
+      }
+    },
+    {
+      "day": 13,
+      "date": "Day 13 (Thursday, July 22)",
+      "name": "Dauphin, MB to Kenora, ON",
+      "corridor": "Hwy 16 & Trans-Canada Hwy 1 to Whiteshell",
+      "distance_km": 440.0,
+      "distance_mi": 273.4,
+      "riding_time": "4h 45m",
+      "weather": "Sunny, 25°C (77°F)",
+      "description": "Ride south-east through Neepawa and fertile farmland to Portage la Prairie. Sweep around Winnipeg's southern perimeter and ride through Whiteshell Provincial Park's lakes and granite bluffs, crossing back into Ontario at Kenora.",
+      "waypoints": [
+        [51.1494, -100.0494],
+        [51.0400, -99.5200],
+        [50.2289, -99.4650],
+        [49.9728, -98.2919],
+        [49.7700, -97.1200],
+        [49.6833, -95.3167],
+        [49.7670, -94.4894]
+      ],
+      "primary_hotel": {
+        "name": "Clarion Lakeside Inn & Conference Centre",
+        "location": "Kenora, ON",
+        "cost": "$185 CAD/night",
+        "phone": "+1 807-468-5521",
+        "url": "https://www.choicehotels.com/"
+      },
+      "secondary_hotel": {
+        "name": "Best Western PLUS Lakeside Inn",
+        "location": "Kenora, ON",
+        "cost": "$195 CAD/night",
+        "phone": "+1 807-468-5521",
+        "url": "https://www.bestwestern.com/"
+      }
+    },
+    {
+      "day": 14,
+      "date": "Day 14 (Friday, July 23)",
+      "name": "Kenora, ON to Nipigon, ON",
+      "corridor": "Trans-Canada Hwy 17 East Lake Superior Approach",
+      "distance_km": 595.0,
+      "distance_mi": 369.7,
+      "riding_time": "6h 15m",
+      "weather": "Partly Cloudy, 21°C (70°F)",
+      "description": "Smooth, rhythmic highway winding through Northwestern Ontario's lake labyrinth through Dryden and Ignace. Bypass Thunder Bay and ride along the northern tip of Lake Superior to the historic crossroads town of Nipigon.",
+      "waypoints": [
+        [49.7670, -94.4894],
+        [49.8500, -93.3833],
+        [49.7800, -92.8367],
+        [49.4167, -91.6667],
+        [49.0500, -90.4667],
+        [48.4500, -89.2000],
+        [48.7500, -88.7500],
+        [49.0131, -88.2611]
+      ],
+      "primary_hotel": {
+        "name": "The Red Rock Inn (Historic Waterfront Lodge)",
+        "location": "Red Rock / Nipigon, ON",
+        "cost": "$165 CAD/night",
+        "phone": "+1 807-886-9999",
+        "url": "https://theredrockinn.com/"
+      },
+      "secondary_hotel": {
+        "name": "Nipigon River Inn",
+        "location": "Nipigon, ON",
+        "cost": "$145 CAD/night",
+        "phone": "+1 807-887-2101",
+        "url": "https://nipigonriverinn.com/"
+      }
+    },
+    {
+      "day": 15,
+      "date": "Day 15 (Saturday, July 24)",
+      "name": "Nipigon, ON to Hearst, ON",
+      "corridor": "Northern Highway 11 Boreal Wilderness",
+      "distance_km": 400.0,
+      "distance_mi": 248.5,
+      "riding_time": "4h 15m",
+      "weather": "Sunny, 23°C (73°F) - Pine scents",
+      "description": "Turn onto Ontario's true Northern Route (Hwy 11)! Sweep north around Lake Nipigon through Beardmore, Geraldton (Greenstone), Longlac, and the vast remote boreal wilderness of the Pagwa River into the francophone forestry capital of Hearst.",
+      "waypoints": [
+        [49.0131, -88.2611],
+        [49.6100, -87.9500],
+        [49.7250, -86.9530],
+        [49.7770, -86.5330],
+        [49.8000, -85.7000],
+        [49.7500, -84.2000],
+        [49.6861, -83.6681]
+      ],
+      "primary_hotel": {
+        "name": "Companion Hotel Motel",
+        "location": "Hearst, ON",
+        "cost": "$160 CAD/night",
+        "phone": "+1 705-362-4304",
+        "url": "https://companionhotelmotel.ca/"
+      },
+      "secondary_hotel": {
+        "name": "Super 8 by Wyndham Hearst",
+        "location": "Hearst, ON",
+        "cost": "$150 CAD/night",
+        "phone": "+1 705-362-4281",
+        "url": "https://www.wyndhamhotels.com/"
+      }
+    },
+    {
+      "day": 16,
+      "date": "Day 16 (Sunday, July 25)",
+      "name": "Hearst, ON to Cochrane, ON",
+      "corridor": "Northern Highway 11 Clay Belt",
+      "distance_km": 260.0,
+      "distance_mi": 161.6,
+      "riding_time": "2h 50m",
+      "weather": "Warm & Sunny, 24°C (75°F)",
+      "description": "Relaxed scenic cruise through Ontario's Clay Belt past Mattice, Opasatika, and Kapuskasing (riverside park & model town) to Cochrane, home of the famous Canadian Polar Bear Habitat and terminus of the Polar Bear Express railway.",
+      "waypoints": [
+        [49.6861, -83.6681],
+        [49.6167, -83.2667],
+        [49.5333, -82.8833],
+        [49.4167, -82.4333],
+        [49.2833, -81.6333],
+        [49.0631, -81.0294]
+      ],
+      "primary_hotel": {
+        "name": "Best Western Swan Castle Inn",
+        "location": "Cochrane, ON",
+        "cost": "$165 CAD/night",
+        "phone": "+1 705-272-6587",
+        "url": "https://www.bestwestern.com/"
+      },
+      "secondary_hotel": {
+        "name": "Thriftlodge Cochrane",
+        "location": "Cochrane, ON",
+        "cost": "$130 CAD/night",
+        "phone": "+1 705-272-4208",
+        "url": "https://www.wyndhamhotels.com/"
+      }
+    },
+    {
+      "day": 17,
+      "date": "Day 17 (Monday, July 26)",
+      "name": "Cochrane, ON to Temiskaming Shores, ON",
+      "corridor": "Hwy 11 South Lake Timiskaming Valley",
+      "distance_km": 240.0,
+      "distance_mi": 149.1,
+      "riding_time": "2h 45m",
+      "weather": "Sunny, 24°C (75°F)",
+      "description": "Ride south through Iroquois Falls, Matheson, and past the Kirkland Lake gold mining district. Cruise through the Little Claybelt agricultural valley past the giant Earlton bison to the beautiful shores of Lake Timiskaming at New Liskeard/Haileybury.",
+      "waypoints": [
+        [49.0631, -81.0294],
+        [48.7667, -80.6833],
+        [48.5333, -80.4833],
+        [48.1167, -80.1833],
+        [47.8167, -79.8667],
+        [47.7083, -79.8167],
+        [47.5139, -79.6764]
+      ],
+      "primary_hotel": {
+        "name": "Waterfront Inn",
+        "location": "New Liskeard / Temiskaming Shores, ON",
+        "cost": "$175 CAD/night",
+        "phone": "+1 705-647-8711",
+        "url": "https://waterfrontinn.ca/"
+      },
+      "secondary_hotel": {
+        "name": "Holiday Inn Express & Suites New Liskeard",
+        "location": "Temiskaming Shores, ON",
+        "cost": "$185 CAD/night",
+        "phone": "+1 705-647-7888",
+        "url": "https://www.ihg.com/"
+      }
+    },
+    {
+      "day": 18,
+      "date": "Day 18 (Tuesday, July 27)",
+      "name": "Temiskaming Shores, ON to Hanmer, ON",
+      "corridor": "Hwy 11 South & Hwy 17 West Grand Homecoming",
+      "distance_km": 255.0,
+      "distance_mi": 158.4,
+      "riding_time": "2h 55m",
+      "weather": "Sunny, 25°C (77°F) - Victorious homecoming",
+      "description": "Complete the grand 18-day expedition loop! Ride south through old-growth pine forests of Temagami, past Marten River to North Bay. Turn west on Hwy 17 along Lake Nipissing past Sturgeon Falls, connecting through to home base in Hanmer with 0.0 m loop closure!",
+      "waypoints": [
+        [47.5139, -79.6764],
+        [47.3333, -79.8167],
+        [47.0667, -79.7833],
+        [46.7200, -79.8000],
+        [46.3091, -79.4608],
+        [46.3644, -79.9239],
+        [46.4400, -80.3000],
+        [46.5000, -80.8500],
+        [46.6473, -80.9754]
+      ],
+      "primary_hotel": {
+        "name": "Hanmer Home Base (Expedition Complete!)",
+        "location": "Hanmer, ON",
+        "cost": "$0 CAD",
+        "phone": "Home",
+        "url": ""
+      },
+      "secondary_hotel": {
+        "name": "Hanmer Home Base",
+        "location": "Hanmer, ON",
+        "cost": "$0 CAD",
+        "phone": "Home",
+        "url": ""
+      }
+    }
+  ]
+}
