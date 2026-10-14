@@ -1925,7 +1925,7 @@ full_html = f"""<!DOCTYPE html>
             marker.bindPopup(`
                 <div class="poi-popup-card">
                     <div class="poi-popup-img-wrap">
-                        <img src="${{photoSrc}}" alt="${{poi.name}}" class="poi-popup-img" loading="lazy" onerror="this.onerror=null; this.src='${{fallbackPhoto}}';">
+                        <img src="${{photoSrc}}" alt="${{poi.name}}" class="poi-popup-img" loading="lazy" referrerpolicy="no-referrer" onerror="this.onerror=null; this.src='${{fallbackPhoto}}';">
                         <span class="poi-popup-day-badge">${{poi.day}}</span>
                         <span class="poi-popup-cat-badge" style="background: ${{poi.color}};">${{poi.category}}</span>
                     </div>
